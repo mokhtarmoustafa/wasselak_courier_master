@@ -1,0 +1,251 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="sliderStyle">@style/Widget.App.Slider</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+/////////////////////////////////////////////////////
+    <style name="MaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- just override the colors used in the default style -->
+        <item name="colorOnPrimary">@color/colorAccent</item>
+        <item name="colorPrimary">#000</item>
+    </style>
+
+    ///////////////////////////////////////////////////
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+    </style>
+
+    <!-- Style for material design 'Spinner'-->
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_12dp</item>
+        <item name="android:paddingRight">@dimen/dimen_12dp</item>
+        <item name="android:minWidth">@dimen/dimen_24dp</item>
+        <item name="android:minHeight">@dimen/dimen_24dp</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+    <item name="android:textSize">@dimen/dimen_12sp</item>
+    </style>
+
+
+    //alert dialog theme
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">#212121</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+    <style name="AlertDialogTheme.white" parent="AlertDialogTheme">
+    <item name="colorSurface">@color/white</item>
+    </style>
+
+    <style name="material_theme_rounded" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialAlertDialog.Rounded</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialAlertDialog.Rounded" parent="">
+        <item name="cornerSize">10dp</item>
+    </style>
+
+
+
+
+    <style name="TitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">#D9000000</item>
+        <item name="fontFamily">@font/cairo_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="BodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">#99000000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/cairo_regular</item>
+    </style>
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#007600</item>
+        <item name="rippleColor">#a4a4a4</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/cairo_regular</item>
+    </style>
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#007600</item>
+        <item name="rippleColor">#a4a4a4</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/cairo_regular</item>
+    </style>
+    ///////////////////////////////////
+
+    <style name="MyToolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleTextAppearance">@style/My_TextAppearance_Toolbar</item>
+    </style>
+
+    <style name="MyToolbar1" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="titleTextAppearance">@style/My_TextAppearance_Toolbar</item>
+    </style>
+
+    <style name="My_TextAppearance_Toolbar" parent="@style/TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/cairo_semibold</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="RatingBarSmallTheme" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/grey_status</item>
+        <item name="colorControlActivated">@color/colorYellow</item>
+        <item name="ratingBarStyle">@style/Widget.AppCompat.RatingBar.Small</item>
+    </style>
+
+    <style name="bottom_sheet_rounded_style" parent="">
+        <item name="cornerSize">16dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style
+        name="ThemeOverlay.app.BottomSheetDialog"
+        parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.waslellak.BottomSheet</item>
+    </style>
+
+    <style name="Widget.waslellak.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/bottom_sheet_rounded_style</item>
+    </style>
+
+
+    <style name="Widget.App.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Slider</item>
+        <item name="labelStyle">@style/Widget.App.Tooltip</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Slider" parent="">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/green_light</item>
+        <item name="colorOnSurface">@color/green_light</item>
+    </style>
+
+
+    <style name="Widget.App.Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textAppearance">@style/TextAppearance.App.Tooltip</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.App.Tooltip" parent="TextAppearance.MaterialComponents.Tooltip">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+          <style name="segement_style" >
+              <item name="android:button">@android:color/transparent</item>
+              <item name="android:gravity">center</item>
+              <item name="android:padding">4dp</item>
+              <item name="android:textColor">@drawable/segement_text_color_selector</item>
+              <item name="android:minWidth">80dp</item>     </style>
+
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/colorYellow</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+
+
+    <style name="AppTheme.ExposedDropdownMenu"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <!-- color of box ONLY, not dropdown -->
+        <item name="boxBackgroundColor">@color/transparent</item>
+        <!-- the box outline color depending on state
+             (default, enabled, hovered, focused, but NOT error) -->
+        <item name="boxStrokeColor">@color/material_spinner_box</item>
+        <!-- the box outline color just for errors -->
+        <item name="boxStrokeErrorColor">@color/red_error</item>
+        <!-- enable 8dp space below the box for error message -->
+        <item name="errorEnabled">true</item>
+        <!-- the hint INSIDE the box, before focusing the TextInputEditText -->
+        <item name="android:textColorHint">@color/colorSecondaryText</item>
+        <!-- the hint ON TOP of the box, when the TextInputEditText is focused -->
+        <item name="hintTextColor">@color/colorPrimary</item>
+        <!-- Gain access to additional styling for the child AutoCompleteTextView,
+             which includes this spinner's dropdown/popup menu -->
+        <item name="materialThemeOverlay">@style/AppTheme.ExposedDropdownMenu.MaterialThemeOverlay</item>
+    </style>
+
+    <!-- customization of the material theme for use as
+         an overlay for the ExposedDropdownMenu style  -->
+    <style name="AppTheme.ExposedDropdownMenu.MaterialThemeOverlay"
+        parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- background color of dropdown (popup) items -->
+        <item name="colorSurface">#444444</item>
+        <!--
+         When this overlay is applied, the AutoCompleteTextView
+         loses padding. Luckily, we can restore it by defining
+         a style that should be applied to all AutoCompletTextView(s)
+         in this theme/overlay
+         -->
+        <item name="autoCompleteTextViewStyle">@style/AppTheme.ExposedDropdownMenu.AutoCompleteStyle</item>
+    </style>
+
+    <!-- style the AutoCompleteTextView of our material spinner -->
+    <style name="AppTheme.ExposedDropdownMenu.AutoCompleteStyle">
+        <!-- restore padding to sanity -->
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- style for material spinner 'item' layout -->
+    <style name="MaterialSpinnerItem" parent="Widget.AppCompat.TextView">
+        <item name="android:color">@color/white</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

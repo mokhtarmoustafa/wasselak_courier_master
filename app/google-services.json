@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "767214588284",
+    "firebase_url": "https://wasselakcourier.firebaseio.com",
+    "project_id": "wasselakcourier",
+    "storage_bucket": "wasselakcourier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767214588284:android:0f96f77fcb4911c48994f9",
+        "android_client_info": {
+          "package_name": "com.unicom.wasalakcourier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767214588284-1co0k0gbc02q4aj2pta8e8v2ja6hci6k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unicom.wasalakcourier",
+            "certificate_hash": "ceff4a13e528ed013f689d615e7dd95deda668f1"
+          }
+        },
+        {
+          "client_id": "767214588284-3husl4uba8trs2gathpbqvv7qh4k9na6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNlifvR2bP99Jut99X7LZMtIAnsjbCZsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767214588284-3husl4uba8trs2gathpbqvv7qh4k9na6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

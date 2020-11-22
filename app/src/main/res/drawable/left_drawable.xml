@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background" />
+    <item
+        android:bottom="@dimen/dimen_8dp"
+        android:drawable="@drawable/ic_baseline_edit_24"
+        android:end="@dimen/dimen_8dp"
+        android:gravity="center"
+        android:start="@dimen/dimen_8dp"
+        android:top="@dimen/dimen_8dp" />
+</layer-list>
