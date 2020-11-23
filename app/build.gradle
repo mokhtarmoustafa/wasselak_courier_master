@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
@@ -32,6 +33,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     buildFeatures {
         dataBinding = true
         viewBinding = true
@@ -52,34 +57,33 @@ android.defaultConfig.manifestPlaceholders = [
 dependencies {
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    def appcompat_version = "1.3.0-alpha01"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     // For loading and tinting drawables on older versions of the platform
     implementation "androidx.appcompat:appcompat-resources:$appcompat_version"
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.3.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "com.google.android.material:$appcompat_version"
     implementation "androidx.cardview:cardview:1.0.0"
-    implementation "androidx.preference:preference:1.1.0"
+    implementation "androidx.preference:preference-ktx:1.1.1"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
 
     //recyclerView with list adapter
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     // For control over item selection of both touch and mouse driven selection
-    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc03"
 
-    def lifecycle_version = "2.2.0"
+
     // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
-    def nav_version = "2.3.0-alpha06"
     // Java language implementation
-    implementation "androidx.navigation:navigation-fragment:$nav_version"
-    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     //rxjava3 , rxandroid
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
@@ -91,8 +95,8 @@ dependencies {
 
     //retrofit2
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
-    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
     implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
 
@@ -100,11 +104,11 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     //firebase messaging cloud
-    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
     // add the Firebase SDK for Google Analytics
-    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
     // Add the Firebase Crashlytics SDK.
-    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
 
 
     //Android image slider
@@ -119,7 +123,7 @@ dependencies {
     implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
 
     //google play services apis
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 //    implementation 'com.google.android.libraries.places:places:2.3.0'
 
@@ -141,10 +145,9 @@ dependencies {
     // hilt viewModel
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02"
     annotationProcessor 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha02"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0-beta01"
 
     //circle image view
-//    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.mikhaellopez:circularimageview:4.2.0'
 
     //image picker with crop
@@ -153,10 +156,15 @@ dependencies {
     //Social Media Sign Up
     implementation 'com.github.ahmed-adel-said:socialmediasignup:v1.0'
 
-    //rate horizental bar
-    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
-
-    implementation "androidx.fragment:fragment:1.2.5"
-
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+//map ripple effect
     implementation 'com.github.aarsy.googlemapsrippleeffect:googlemapsrippleeffect:1.0.2'
+
+    // Kotlin components
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7"
+
+    // RecyclerView Animator
+    implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
 }
